@@ -67,7 +67,7 @@ public class PostagemController {
 	@DeleteMapping("/{id}") // {id} <= interpolacao ou template literal
 	public void delete(@PathVariable long id) {
 		
-		repository.deleteById(id);
+		repository.deleteById(id);	
 	}
 
 }
