@@ -48,6 +48,12 @@ public class PostagemController {
 																						  //realizar nossa pesquisa por meio de letras ou pavras completas de titulos como se fosse o LIKE do SQL
 	}
 	
+	@GetMapping("/texto/{texto}")
+	public ResponseEntity<List<Postagem>> GetByTexto(@PathVariable String texto) {
+		
+		return ResponseEntity.ok(repository.findAllByTextoContainingIgnoreCase(texto));
+	}
+	
 	// insere na base de dados uma nova postagem, semque que for solicitado uma funcao do tipo Post, sera chamado essa funcao de insercao de dados
 	// @RequestBody server para podermos capiturar tudo que esta no corpo da requisicao ou no objeto Postagem
 	@PostMapping

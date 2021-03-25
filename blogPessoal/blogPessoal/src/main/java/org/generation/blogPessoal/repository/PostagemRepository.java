@@ -10,5 +10,7 @@ import org.springframework.stereotype.Repository;
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 	// Busca todos os titulos com base nos caracters informados (Containing = LIKE do SLQ) = findAllByTituloContainingIgnoreCase
 	public List<Postagem> findAllByTituloContainingIgnoreCase (String titulo);
+	
+	public List<Postagem> findAllByTextoContainingIgnoreCase(String texto);
 
 }
