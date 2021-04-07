@@ -13,6 +13,7 @@ public class UserDetailsImplementation implements UserDetails {
 
 	private String userName;
 	private String password;
+	
 	private List<GrantedAuthority> authorities; 
 
 	public UserDetailsImplementation(Usuario user) {
@@ -20,7 +21,9 @@ public class UserDetailsImplementation implements UserDetails {
 		this.password = user.getSenha();		
 	}
 
-	public UserDetailsImplementation() {}
+	public UserDetailsImplementation() {
+		
+	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
