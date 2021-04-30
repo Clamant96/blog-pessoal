@@ -41,9 +41,9 @@ public class SwaggerConfig {
 	
 	/* APRESENTA NA DOCUMENTACAO OS DADOS DO DESENVOLVEDOR/DESENVOLVEDORES DA API */
 	private Contact contact() {
-		return new Contact("Kevin Alec Neri Lazzarotto",
+		return new	 Contact("Kevin Alec Neri Lazzarotto",
 		"https://github.com/Clamant96",
-		"Estudante em ADS | Desenvolvedor Web Java Junior");
+		"Estudante em ADS | Desenvolvedor Web Java Junior Full Stack");
 		
 	}
 }
