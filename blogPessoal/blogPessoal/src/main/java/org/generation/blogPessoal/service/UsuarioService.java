@@ -21,7 +21,7 @@ public class UsuarioService {
 	public Optional<Usuario> CadastrarUsuario(Usuario usuario) {	
 		
 		/* CONDICAO PARA INPEDIR A CRIACAO DE UM USUARIO DUPLICADO DENTRO DA APLICACAO */
-		if(repository.findByUsuario(usuario.getUsuario()).isPresent()) {
+		if(repository.findByUsuario(usuario.getUsuario()).isPresent() && usuario.getId() == 0) {
 			return null;
 			
 		}
